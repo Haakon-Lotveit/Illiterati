@@ -18,25 +18,30 @@ public class TestWorld implements World {
 	public TestWorld() {
 		scenes = new ArrayList<>();
 		actors = new ArrayList<>();
-		Player player = new TestPlayer();
+		this.player = new TestPlayer();
+	}
+	
+	public void addScene(Scene scene) { 
+		this.scenes.add(scene);
+	}
+	
+	public void addActor(Actor actor) {
+		this.actors.add(actor);
 	}
 	
 	@Override
 	public Collection<Scene> allScenes() {
-		// TODO Auto-generated method stub
-		return null;
+		return scenes;
 	}
 
 	@Override
 	public Collection<Actor> allActors() {
-		// TODO Auto-generated method stub
-		return null;
+		return actors;
 	}
 
 	@Override
 	public Player player() {
-		// TODO Auto-generated method stub
-		return null;
+		return player;
 	}
 	
 }

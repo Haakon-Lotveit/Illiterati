@@ -19,7 +19,7 @@ public class IlliterateParser {
 	 * @return a string containing the world's response from attempting such actions.
 	 */
 	public String parseLine(String line) {
-		String[] tokens = line.split("\\ws+");
+		String[] tokens = line.trim().split("\\s+");
 		
 		if(tokens.length < 2) {
 			return "Do what with the what now? You need at least two words!";
@@ -28,14 +28,14 @@ public class IlliterateParser {
 		String verbToken = tokens[0];
 		Verb verb = Verb.fromWord(verbToken);
 		if(verb == Verb.ERROR) {
-			return String.format("I don't know what %s means. Sorry%n", verbToken);
+			return String.format("I don't know what %s means. Sorry.", verbToken);
 		}
 		
 		String nounToken = tokens[1];
 		Actor noun = getNoun(nounToken);
 		
 		if(noun == NO_OBJECT) {
-			return "There's no such thing as a " + nounToken;
+			return String.format("There's no thing called \"%s\".", nounToken);
 		}
 		
 		return verb.apply(noun);
