@@ -3,6 +3,7 @@ package no.illiterati.model.world;
 import java.util.Collection;
 
 import no.illiterati.model.actor.Actor;
+import no.illiterati.model.player.Player;
 import no.illiterati.model.scene.Scene;
 
 /**
@@ -12,4 +13,5 @@ import no.illiterati.model.scene.Scene;
 public interface World {
 	public Collection<Scene> allScenes();
 	public Collection<Actor> allActors();
+	public Player player();
 }
