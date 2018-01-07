@@ -6,8 +6,7 @@ import no.illiterati.model.actor.Actor;
 import no.illiterati.model.scene.Scene;
 
 public interface Player {
-	public String go();
+	public String go(Scene location);
 	public Scene where();
 	public Collection<Actor> inventory();
-	public String lookInventory();
 }
