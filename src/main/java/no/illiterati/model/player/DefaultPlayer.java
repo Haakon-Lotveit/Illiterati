@@ -22,6 +22,7 @@ public class DefaultPlayer implements Player {
 	 */
 	@Override
 	public String go(Scene location) {
+		Objects.requireNonNull(location, "Location cannot be null.");
 		this.location = location;
 		return location.describeAll();
 	}
