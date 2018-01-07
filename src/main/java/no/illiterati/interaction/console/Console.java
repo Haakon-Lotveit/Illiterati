@@ -8,6 +8,8 @@ import no.illiterati.model.world.World;
 public class Console {
 	
 	public void run(World world) {
+		// We do not want to close the standard input when we're done with it here.
+		@SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
 		IlliterateParser parser = new IlliterateParser(world);
 		while(true) {
