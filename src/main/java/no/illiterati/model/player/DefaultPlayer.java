@@ -1,5 +1,6 @@
 package no.illiterati.model.player;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -32,7 +33,7 @@ public class DefaultPlayer implements Player {
 	 */
 	@Override
 	public Collection<Actor> inventory() {
-		return inventory;
+		return new ArrayList<>(inventory);
 	}
 
 }
