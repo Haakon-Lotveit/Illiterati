@@ -1,17 +1,15 @@
 package no.illiterati.interaction.parser;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import no.illiterati.model.world.World;
 import no.stubs.model.ActorStub;
 import no.stubs.model.TestWorld;
 
 public class TestIlliterateParser {
 
-	private static final String INVALID_OBJECT_NAME = "Elefant";
 	private static final String OBJECT_NAME = "TestObject";
 	
 	private static final String LOOK = "look";
